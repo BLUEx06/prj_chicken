@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/listPropertyStyle.css" />
+    <title>listProperty</title>
+  </head>
+  <body>
+    <!-- breadcrumb -->
+    <div class="container col-md-10 col-lg-8 py-2 py-md-3">
+      <nav
+        class="d-flex align-items-center"
+        style="--bs-breadcrumb-divider: '>'"
+        aria-label="breadcrumb "
+      >
+        <ol class="breadcrumb w-100">
+          <li class="breadcrumb-item"><a href=".">主頁</a></li>
+          <li class="breadcrumb-item">
+            <a href="/accountSettings.html">會員</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">刊登營地</li>
+        </ol>
+      </nav>
+    </div>
+    <br />
+
+    <!-- progress bar -->
+    <div class="container w-100 border-bottom">
+      <div class="progress-container">
+        <div class="progress" id="progress"></div>
+        <div class="circles active">1</div>
+        <div class="circles">2</div>
+        <div class="circles">3</div>
+        <div class="circles">4</div>
+      </div>
+      <!-- <button class="btn" id="prev" disabled>Prev</button>
+    <button class="btn" id="next">Next</button> -->
+    </div>
+
+    <!-- fill in -->
+    <div class="container bg-success" style="min-height: 1000vh">
+      <!-- Q1 -->
+      <div class="container justify-content-center my-3 bg-white p-3">
+        <h5>您的營區區有哪種選擇？</h5>
+
+        <div class="col-8 col-lg-4 col-lg-3">
+          <div class="card">
+            <div class="card-body py-3">
+              <h5 class="card-title">帳篷</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                eligendi libero dolores delectus ullam alias esse dolor
+                cupiditate aperiam neque?
+              </p>
+              <button class="btn btn btn-outline-primary w-100">選定</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-8 col-lg-4 col-lg-3">
+          <div class="card">
+            <div class="card-body py-3">
+              <h5 class="card-title">露營車</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                temporibus nemo eaque optio enim perspiciatis hic voluptas vitae
+                cupiditate distinctio.
+              </p>
+              <button class="btn btn btn-outline-primary w-100">選定</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 col-lg-4 col-lg-3">
+          <div class="card">
+            <div class="card-body py-3">
+              <h5 class="card-title">小木屋</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+                temporibus nemo eaque optio enim perspiciatis hic voluptas vitae
+                cupiditate distinctio.
+              </p>
+              <button class="btn btn btn-outline-primary w-100">選定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <!-- Q2 -->
+      <div class="container Q2 my-3 bg-white border-primary p-3">
+        <h5>您的營區位於哪裡？</h5>
+        <form>
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">區域</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="locationNorth"
+                  value="option1"
+                  checked
+                />
+                <label class="form-check-label" for="locationNorth">
+                  北部
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="locationCenter"
+                  value="option2"
+                />
+                <label class="form-check-label" for="locationCenter">
+                  中部
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="locationSouth"
+                  value="option2"
+                />
+                <label class="form-check-label" for="locationSouth">
+                  南部
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="locationEast"
+                  value="option2"
+                />
+                <label class="form-check-label" for="locationEast">
+                  東部
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="row mb-3">
+            <label for="inputAddress" class="col-sm-2 col-form-label"
+              >地址</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="text"
+                class="form-control"
+                id="inputAddress"
+                placeholder="請輸入地址"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">下一步</button>
+        </form>
+      </div>
+      <br />
+    </div>
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

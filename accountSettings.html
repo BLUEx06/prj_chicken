@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <meta name="theme-color" content="#7952b3" />
+    <title>accountSettings</title>
+    <!-- login with google cdn -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <style>
+      /* body {
+         border: 0.1px solid coral;
+        box-sizing: border-box; 
+      } */
+    </style>
+  </head>
+
+  <body>
+    <!-- hidden nav -->
+
+    <!-- nav with login -->
+
+    <!-- breadcrumb -->
+    <div class="container col-md-10 col-lg-8 py-2 py-md-3">
+      <nav
+        class="d-flex align-items-center"
+        style="--bs-breadcrumb-divider: '>'"
+        aria-label="breadcrumb "
+      >
+        <ol class="breadcrumb w-100">
+          <li class="breadcrumb-item"><a href=".">主頁</a></li>
+          <li class="breadcrumb-item">
+            <a href="/accountSettings.html">會員</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">資料更新</li>
+        </ol>
+      </nav>
+    </div>
+    <br />
+
+    <!-- 個人資訊 -->
+    <div
+      class="container col-md-10 col-lg-8 px-lg-5 pt-3 pt-xl-5"
+      style="background: #eee; height: 1100vh"
+    >
+      <div class="container-fluid d-flex mx-lg-5">
+        <div class="card-body px-0 col-9">
+          <h5 class="card-title">更新資訊</h5>
+          <p class="card-text">
+            歐拉歐拉歐拉<br />烏拉拉哈哈哈烏拉拉哈哈哈烏拉拉哈哈哈
+          </p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <img
+            src="/images/user.png"
+            alt="大頭貼"
+            style="max-width: 80px; max-height: 80px"
+          />
+        </div>
+      </div>
+
+      <!-- bookmark -->
+      <div
+        class="accordion mx-md-3 mx-lg-5"
+        id="accordionPanelsStayOpenExample"
+      >
+        <!-- #1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#基本資料"
+              aria-expanded="true"
+              aria-controls=""
+            >
+              基本資料
+            </button>
+          </h2>
+          <div
+            id="基本資料"
+            class="accordion-collapse collapse show"
+            aria-labelledby=""
+          >
+            <div class="accordion-body">
+              <form action="" class="mx-md-3 mx-lg-5 gap-3">
+                <label for="data_Name" class="form-label">姓名</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  id="data-Name"
+                  placeholder="宮水三葉"
+                />
+                <label for="data_email" class="form-label">電子郵件</label>
+                <input
+                  type="email"
+                  class="form-control mb-3"
+                  id="data-email"
+                  placeholder="Chicken@camping.com"
+                />
+                <label for="data_gender" class="form-label">性別</label>
+                <div class="d-flex px-3 mb-3 gap-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="memberGender"
+                      id="member_male"
+                    />
+                    <label class="form-check-label" for="mamber_male">
+                      男性
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="memberGender"
+                      id="member_female"
+                    />
+                    <label class="form-check-label" for="member_female">
+                      女性
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="memberGender"
+                      id="member_neither_gender"
+                      checked
+                    />
+                    <label class="form-check-label" for="member_neither_gender">
+                      不透露
+                    </label>
+                  </div>
+                </div>
+
+                <label for="data_birthday" class="form-label">生日</label>
+                <input
+                  type="date"
+                  class="form-control mb-3"
+                  id="data-birthday"
+                  placeholder="Chicken@camping.com"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- #2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="personInfoHeadingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#過去訂單"
+              aria-expanded="false"
+              aria-controls=""
+            >
+              過去訂單
+            </button>
+          </h2>
+          <div
+            id="過去訂單"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Reprehenderit, commodi laborum dignissimos officiis accusantium
+              aspernatur enim velit voluptas corrupti nesciunt.
+            </div>
+          </div>
+        </div>
+        <!-- #3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="personInfoHeadingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#我的收藏"
+              aria-expanded="false"
+              aria-controls=""
+            >
+              我的收藏
+            </button>
+          </h2>
+          <div
+            id="我的收藏"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo"
+          >
+            <div class="accordion-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Reprehenderit, commodi laborum dignissimos officiis accusantium
+              aspernatur enim velit voluptas corrupti nesciunt.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered py-lg-3">
+        <div class="modal-content px-3 px-lg-5">
+          <div class="modal-header">
+            <h4 class="modal-title w-100 text-center">會員登入</h4>
+          </div>
+
+          <div class="modal-body">
+            <div>
+              <label for="logInEmail" class="form-label">Account(email)</label>
+              <input
+                type="email"
+                class="form-control mb-3"
+                id="logInEmail"
+                placeholder="login@gmail.com"
+              />
+            </div>
+            <div>
+              <label for="logInPwd" class="form-label">Password</label>
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="logInPwd"
+                placeholder="Password"
+              />
+            </div>
+            <div class=""><input type="checkbox" class="mb-3" /> 記住我</div>
+            <button type="button" onclick="" class="btn btn-primary w-100 mb-3">
+              登入
+            </button>
+            <div
+              id="g_id_onload"
+              data-client_id="YOUR_GOOGLE_CLIENT_ID"
+              data-login_uri="https://your.domain/your_login_endpoint"
+              data-auto_prompt="false"
+            ></div>
+            <div
+              class="g_id_signin"
+              data-type="standard"
+              data-size="large"
+              data-theme="outline"
+              data-text="sign_in_with"
+              data-shape="rectangular"
+              data-logo_alignment="left"
+            ></div>
+          </div>
+
+          <div class="modal-footer justify-content-center">
+            <div class="toSignup text">
+              <p>尚未成為會員</p>
+              <span>登記註冊代表你接受我們的條款和條件和隱私政策。</span>
+              <a href="#" type="button" class="member">註冊</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

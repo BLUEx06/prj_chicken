@@ -9,19 +9,25 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>CHICKEN!!</title>
+    <link rel="stylesheet" href="/indexStyle.css" />
+    <title>index</title>
   </head>
   <body>
+    <!-- singin with google -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <!-- hidden btn -->
     <div class="skippy visually-hidden-focusable overflow-hidden">
       <div class="container-xl">
         <a class="d-inline-flex p-2 m-1" href="#maincontent"
           >Skip to main content</a
         >
+        <a class="d-inline-flex p-2 m-1" href="#navigation"
+          >Skip to navigation</a
+        >
       </div>
     </div>
 
+    <!-- navbar no login  -->
     <header>
       <nav
         class="navbar navbar-expand-md navbar-light p-3 bg-light border-bottom"
@@ -29,24 +35,79 @@
         <div
           class="container-lg col-lg-10 d-flex flex-wrap align-items-center justify-content-center"
         >
-          <a class="navbar-brand d-flex align-items-center" href="#"
+          <a class="navbar-brand d-flex align-items-center" href="."
             ><img src="/images/Asset 3.png" alt="" height="40px" />
             <span class="px-2">露過人間</span></a
           >
           <ul
-            class="nav navbar-nav col-md-10 col-12 col-lg-auto me-lg-auto justify-content-center mb-md-0 align-items-center py-md-2"
+            class="nav navbar-nav col-md-10 col-12 col-lg-auto m-auto justify-content-center mb-md-0 align-items-center py-md-2"
           >
             <li class="nav-item">
               <a href="#" class="nav-link link-light active">主頁</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link link-light">營地搜尋</a>
+              <a href="/searchPage.html" class="nav-link link-light"
+                >營地搜尋</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link link-light">會員登入</a>
+              <a href="/accountSettings.html" class="nav-link link-light"
+                >會員專區</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link link-light">加入我們</a>
+              <a href="/listProperty.html" class="nav-link link-light">加入我們</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link link-light">關於我們</a>
+            </li>
+          </ul>
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+            style="min-width: 100px"
+          >
+            登入
+          </button>
+        </div>
+      </nav>
+    </header>
+    <br />
+
+    <!-- navbar with login -->
+    <header>
+      <nav
+        class="navbar navbar-expand-md navbar-light bg-light border-bottom"
+        id="navigatiion"
+      >
+        <div
+          class="container-lg col-lg-10 d-flex flex-wrap align-items-center justify-content-center"
+        >
+          <a class="navbar-brand d-flex align-items-center" href="."
+            ><img src="/images/Asset 3.png" alt="" height="40px" />
+            <span class="px-2">露過人間</span></a
+          >
+          <ul
+            class="nav navbar-nav col-md-10 col-12 col-lg-auto m-auto justify-content-center mb-md-0 align-items-center py-md-2"
+          >
+            <li class="nav-item">
+              <a href="#" class="nav-link link-light active">主頁</a>
+            </li>
+            <li class="nav-item">
+              <a href="/searchPage.html" class="nav-link link-light"
+                >營地搜尋</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/accountSettings.html" class="nav-link link-light"
+                >會員專區</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/listProperty.html" class="nav-link link-light">加入我們</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link link-light">關於我們</a>
@@ -61,8 +122,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <span class="mx-1">租客</span>
-              <span class="mx-1">薯餅</span>
+              <span class="me-1" id="loginName">薯餅</span>
               <img
                 src="/images/avatars/01.svg"
                 alt="mdo"
@@ -74,10 +134,23 @@
             <ul
               class="dropdown-menu dropdown-menu-end"
               aria-labelledby="loginDropdown"
+              style="z-index: 1021"
             >
-              <li><a class="dropdown-item" href="#">管理帳號</a></li>
-              <li><a class="dropdown-item" href="#">過去訂單</a></li>
-              <li><a class="dropdown-item" href="#">我的收藏</a></li>
+              <li>
+                <a class="dropdown-item" href="/accountSettings.html#管理帳號"
+                  >管理帳號</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="/accountSettings.html#過去訂單"
+                  >過去訂單</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="/accountSettings.html#我的收藏"
+                  >我的收藏</a
+                >
+              </li>
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#">登出</a></li>
             </ul>
@@ -85,7 +158,9 @@
         </div>
       </nav>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <!-- search bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container-fluid d-flex justify-content-center">
         <form class="d-flex">
           <input
@@ -130,6 +205,7 @@
           aria-label="Slide 4"
         ></button>
       </div>
+
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="./images/1.jpeg" class="d-block w-100" alt="..." />
@@ -141,7 +217,6 @@
           <img src="./images/3.jpeg" class="d-block w-100" alt="..." />
         </div>
         <div class="carousel-item">
-          <!-- <img src="./images/3.jpeg" class="d-block w-100" alt="..." /> -->
           <div class="carousel-bricks">
             <div class="container-bricks">
               <div class="text" style="--j: 0">
@@ -170,11 +245,10 @@
               </div>
             </div>
           </div>
-          <div class="carousel-caption d-none d-md-block">
-            <h3>Hover blocks</h3>
-          </div>
+          
         </div>
       </div>
+
       <button
         class="carousel-control-prev"
         type="button"
@@ -195,6 +269,7 @@
       </button>
     </div>
 
+    <!--  -->
     <!-- dummy  -->
     <div class="container-lg container-md mt-5 text-center">
       <h1>Dummy Heading</h1>
@@ -212,7 +287,9 @@
           <h3>精選營區</h3>
           <p class="lead text-muted">通過認證，早餐附屬餅</p>
         </div>
-        <div class="row my-5 justify-content-center align-items-center">
+        <div
+          class="row my-5 justify-content-center align-items-center overflow-auto"
+        >
           <div class="col-8 col-lg-4 col-lg-3">
             <div class="card">
               <img src="/images/cat.png" class="card-img-top" alt="..." />
@@ -222,7 +299,7 @@
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class="btn btn-primary">預定</a>
+                <a href="#" class="btn btn-outline-primary">預定</a>
               </div>
             </div>
           </div>
@@ -240,7 +317,7 @@
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class="btn btn-primary">預定</a>
+                <a href="#" class="btn btn-outline-primary">預定</a>
               </div>
             </div>
           </div>
@@ -253,7 +330,7 @@
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class="btn btn-primary">預定</a>
+                <a href="#" class="btn btn-outline-primary">預定</a>
               </div>
             </div>
           </div>
@@ -277,7 +354,7 @@
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class="btn btn-primary">預定</a>
+                <a href="#" class="btn btn-outline-primary">預定</a>
               </div>
             </div>
           </div>
@@ -295,7 +372,7 @@
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class="btn btn-primary">預定</a>
+                <a href="#" class="btn btn-outline-primary">預定</a>
               </div>
             </div>
           </div>
@@ -308,7 +385,7 @@
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class="btn btn-primary">預定</a>
+                <a href="#" class="btn btn-outline-primary">預定</a>
               </div>
             </div>
           </div>
@@ -397,7 +474,9 @@
                   class="form-control"
                   placeholder="Email address"
                 />
-                <button class="btn btn-primary" type="button">Subscribe</button>
+                <button class="btn btn-outline-primary" type="button">
+                  Subscribe
+                </button>
               </div>
             </form>
           </div>
@@ -428,14 +507,84 @@
         </div>
       </footer>
     </div>
-    <!-- try -->
-    <!-- <div class="container">container</div>
-    <div class="container-sm">container-small</div>
-    <div class="container-md">container-medium</div>
-    <div class="container-lg">container-large</div>
-    <div class="container-xl">container-XL</div>
-    <div class="container-fluid">container-fluid</div> -->
 
+    <!-- login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered py-lg-3">
+        <div class="modal-content px-3 px-lg-5">
+          <div class="modal-header">
+            <h4 class="modal-title w-100 text-center">會員登入 或註冊</h4>
+          </div>
+
+          <div class="modal-body">
+            <form action="">
+              <div class="col-12">
+                <label for="logInEmail" class="form-label">Account</label>
+                <input
+                  type="email"
+                  class="form-control mb-3"
+                  id="logInEmail"
+                  placeholder="login@email.com"
+                  required
+                />
+              </div>
+              <div>
+                <label for="logInPwd" class="form-label">Password</label>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  id="logInPwd"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <div class=""><input type="checkbox" class="mb-3" /> 記住我</div>
+              <div class="d-grid gap2">
+                <button
+                  id="loginBtn"
+                  type="submit"
+                  onclick=""
+                  class="btn btn-outline-primary mb-3"
+                >
+                  登入
+                </button>
+                <div
+                  id="g_id_onload"
+                  data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                  data-login_uri="https://your.domain/your_login_endpoint"
+                  data-auto_prompt="false"
+                </div>
+                <div
+                  class="g_id_signin"
+                  data-type="standard"
+                  data-size="large"
+                  data-theme="outline"
+                  data-text="sign_in_with"
+                  data-shape="rectangular"
+                  data-logo_alignment="left"
+                ></div>
+              </div>
+            </form>
+          </div>
+
+          <div class="modal-footer justify-content-center">
+            <div class="toSignup text">
+              <p>尚未成為會員</p>
+              <span>登記註冊代表你接受我們的條款和條件和隱私政策。</span>
+              <a href="/regester.html" type="button" class="member">註冊</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
