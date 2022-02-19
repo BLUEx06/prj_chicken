@@ -10,6 +10,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="jquery-3.5.1.min.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -35,7 +36,7 @@
       }
 
       img {
-        animation: shadow 2.1s ease-out infinite;
+        animation: shadow 2.1s ease-out;
       }
 
       @keyframes shadow {
@@ -48,7 +49,6 @@
           filter: drop-shadow(3px 5px 5px #677);
         }
       }
-
       .wrap {
         position: relative;
         /* -webkit-mask-image: url(../images/chicken_logo.png);
@@ -56,22 +56,19 @@
         /* background-color: #333;
         width: 300px;*/
       }
-
       .wrap::after {
         content: "";
         width: 150%;
         height: 100%;
-        /* height: 0; */
-        /* border: 1px solid red; */
         display: block;
         position: absolute;
         top: 0;
         left: -25%;
         filter: opacity(90%);
         background: #eee;
-        animation: preLoader 2.1s ease-out infinite;
+        animation: fill 2.1s ease-out;
       }
-      @keyframes preLoader {
+      @keyframes fill {
         from {
           height: 100%;
         }
@@ -84,18 +81,25 @@
         top: 65%;
         left: 50%;
         transform: translateX(-50%);
-        color: #444;
+        color: #333;
         font-family: sans-serif;
       }
     </style>
 
-    <div class="bg">
+    <div id="preload_body" class="bg">
       <div class="container w-100 d-flex justify-content-center">
         <div class="wrap">
           <img src="../images/chicken_logo.png" width="300" />
         </div>
       </div>
     </div>
-    <h1>露過人間</h1>
+    <h1 id="preload_heading">露過人間</h1>
+    <!-- script -->
+    <script>
+      $(document).ready(function () {
+        $("#preload_body").delay(2100).fadeOut();
+        $("#preload_heading").delay(2100).fadeOut();
+      });
+    </script>
   </body>
 </html>
